@@ -13,10 +13,10 @@ const random = Math.random();
 const __filename = getFilename(import.meta.url);
 const __dirname = getDirname(import.meta.url);
 
-const dataA = await readFile(path.resolve(__dirname, 'files', 'a.json'), 'utf-8');
+const dataA = await readFile(path.join(__dirname, 'files', 'a.json'), 'utf-8');
 const a = JSON.parse(dataA);
 
-const dataB = await readFile(path.resolve(__dirname, 'files', 'b.json'), 'utf-8');
+const dataB = await readFile(path.join(__dirname, 'files', 'b.json'), 'utf-8');
 const b = JSON.parse(dataB);
 
 let unknownObject;

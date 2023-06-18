@@ -34,14 +34,14 @@ const compress = async () => {
         
         const answer = await rl.question('Do you want to delete the original file? (y/n) ');
         if (answer.toLowerCase() === 'y') {
-        await unlink(__filename)
+        await unlink(__filename);
         
             console.log('File was deleted.');
             process.exit();
            
         } else {
-        console.log('File was compress');
-        process.exit();
+            console.log('File was compress');
+            process.exit();
         }
         
         } catch (err) {

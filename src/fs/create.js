@@ -26,8 +26,6 @@ const create = async () => {
         console.log(message.done);
         } 
         else {
-        //throw new Error(err);
-        //console.error(err);
         throw err;
         }
     }

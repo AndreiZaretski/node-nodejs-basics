@@ -19,8 +19,6 @@ const remove = async () => {
         if (err.code === 'ENOENT') {
             throw new Error(message.error);
         } else {
-          //throw new Error(err);
-          //console.error('other',err);
           throw err;
         }
 }

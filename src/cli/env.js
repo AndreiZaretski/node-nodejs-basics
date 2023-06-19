@@ -12,7 +12,6 @@ for (const key in env) {
 }
 const output = pairs.join('; '); 
 console.log(output);
-//console.log(env);
 };
 
 parseEnv();

@@ -13,6 +13,7 @@ const transform = async () => {
         const reversedData = reversedChars.join('');
         const outputData = reversedData + '\n';
 
+        //to generate errors, you can uncomment this code and write error in stdin
         // if (data.includes('error')) {
         //     callback(new Error('Something went wrong!'));
         //     return;

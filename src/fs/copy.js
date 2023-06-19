@@ -32,7 +32,6 @@ const copyFolder = async (oldPath, newPath) => {
       }
     } console.log(message.done);
     } catch (err) {
-      //console.error(err);
       throw err;
     }
 };

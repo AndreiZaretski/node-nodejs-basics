@@ -18,7 +18,6 @@ const list = async () => {
         throw new Error(message.error);
         } else {
         throw err;
-        //console.error('other', err);
         }
     }
 };

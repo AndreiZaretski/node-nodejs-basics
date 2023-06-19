@@ -18,7 +18,6 @@ const read = async () => {
           if (err.code === 'ENOENT') {
             throw new Error(message.error);
           } else {
-           //throw err;
            console.error('other', err);
           }
         }

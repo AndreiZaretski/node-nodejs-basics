@@ -24,6 +24,7 @@ const performCalculations = async () => {
                 reject({ status: 'error', data: null });
             });
             worker.on('exit', (code) => {
+                //console.log(`Worker exited with code ${code} ${i}`);
                 if (code !== 0)
                   reject(new Error(`Worker stopped with exit code ${code}`));
               });

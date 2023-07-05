@@ -10,7 +10,7 @@ const rename = async () => {
     const __dirname = getDirname(import.meta.url);
     const oldFileName = path.join(__dirname, 'files', 'wrongFilename.txt');
     
-    const newFileName = path.join(__dirname, 'files', 'properFilename.txt');
+    const newFileName = path.join(__dirname, 'files', 'properFilename.md');
   
     try {
         

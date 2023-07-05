@@ -2,6 +2,7 @@ import path from 'path';
 import { release, version } from 'os';
 import { createServer as createServerHttp } from 'http';
 import { readFile } from 'fs/promises';
+//import { createRequire } from 'module';
 
 
 import {getFilename,  getDirname } from '../helpers/dist.js';
@@ -13,17 +14,18 @@ const random = Math.random();
 const __filename = getFilename(import.meta.url);
 const __dirname = getDirname(import.meta.url);
 
-const dataA = await readFile(path.join(__dirname, 'files', 'a.json'), 'utf-8');
-const a = JSON.parse(dataA);
-
-const dataB = await readFile(path.join(__dirname, 'files', 'b.json'), 'utf-8');
-const b = JSON.parse(dataB);
-
+//const require = createRequire(import.meta.url);
 let unknownObject;
 
 if (random > 0.5) {
+    //unknownObject = require('./files/a.json');
+    const dataA = await readFile(path.join(__dirname, 'files', 'a.json'), 'utf-8');
+    const a = JSON.parse(dataA);
     unknownObject = a;
     } else {
+    //unknownObject = require('./files/b.json');
+    const dataB = await readFile(path.join(__dirname, 'files', 'b.json'), 'utf-8');
+    const b = JSON.parse(dataB);
     unknownObject = b;
     }
     
